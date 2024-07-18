@@ -7,14 +7,14 @@ def f(n):
         n//=3
     return s
 ans = set()
-for i in range(-250, 250):
+for i in range(-250, 251):
     n1 = f(abs(i))
     if i % 2 == 0:
         n1 = n1[2:] + n1[:2]
     else:
         n1 = n1[-2:] + n1[:-2]
     s1 = int(n1, 3)
-    for j in range(i+1, 251):
+    for j in range(-250, 251):
         n2 = f(abs(j))
         if j % 2 == 0:
             n2 = n2[2:] + n2[:2]
